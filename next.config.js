@@ -17,7 +17,6 @@ module.exports = withContentlayer({
   poweredByHeader: false,
 
   images: {
-    domains: ['blogger.googleusercontent.com', 'ik.imagekit.io', 'res.cloudinary.com'],
-    minimumCacheTTL: 84600 * 90, // 90days
+    unoptimized: true,
   },
 });
