@@ -1,3 +1,15 @@
+# misc
+.DS_Store
+
+# vercel
+.vercel
+
+# Contentlayer
+.contentlayer
+
+# Sitemap
+# public/sitemap.xml
+
 # Logs
 logs
 *.log

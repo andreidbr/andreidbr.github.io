@@ -1,0 +1,68 @@
+---
+title: Version Control: What it is and how it can help
+description: Learn the basics and the strengths of systems like Git
+thumbnail: '../../public/images/posts/version-control-systems-basics/header.png'
+keyword: 'vcs, git, github, gitlab, version control, version control systems, svn'
+date: '2023-01-20'
+tags: 'general'
+---
+
+# Intro
+
+Many testing and programming courses focus a lot on work done locally, on your own machine without any way of keeping track of changes beyond your own memory and potentially using file names like `FINAL`, `FINAL_FINAL`, `FINAL_REALLY_FINAL`. However, in the real world, you will probably work with others as a team in order to develop or test a product.
+
+In order to make life easier for teams to work at the same time on a single piece of software, version control systems appeared. These tools help individual developers spend less time on making sure their changes don't interfere with modifications from colleagues. They're also useful for the whole team by providing the latest functional version of the software and helping merge their work into one cohesive package.
+
+In this article, we're going to explain why version control is a very important aspect of the development and testing lifecycles, and how it can help you and your team become more efficient.
+
+# What is version control? 🔃
+
+Version control systems have an online server, usually called a repository, which holds the latest version of the thing that you are working on. They can be used to monitor changes for all sorts of things, from a desktop application, a website, a test automation framework, or even just a bunch of text documents.
+
+![Git version control flow diagram](../../public/images/posts/version-control-systems-basics/version_control_flow_no_wm.png)
+
+## How it works in practice with Git
+
+While there have been many different systems in the past, from SVN, to Perforce or Mercurial, nowadays Git is the most popular and widely used. As such, let's see how Git works in a broad sense, as it relates to building a software project.
+
+Git relies on two main repositories:
+
+- one available in a remote location, usually a server that runs something like GitHub or GitLab.
+- one available locally on your machine, which you obtain by performing a `clone` operation on the remote repository.
+
+Once they get a task, developers take the latest version. This procedure is called `pull`, as in the developer pulls the latest version or changes.
+
+Once their task is completed, the developer prepares a `commit`, onto which they `add` their modified files. They then give a suggestive commit message that should make it clear what the commit includes and how it changes the repository.
+
+After these operations, the local repository has been changed but the remote repo is still in its original state. As such, it's time to send this change to the server. This is called `push`, as in the commit gets pushed to the remote repository.
+
+The repository then tries to merge those changes with the current latest version and, if successful, a new latest version will be created, with the recent change.
+
+If the process fails, a merge error appears and the developer responsible for the faulty commit must fix it. Until this problem gets resolved, the latest version will still be the one before the problematic commit.
+
+# How can version control systems (VCS) help you? 🤔
+
+## Providing stable versions
+
+You need to protect the source files for a project from faulty modifications but, at the same time, they need to be available so that people can enhance them with new content/features/information. VCS provide both these important attributes, as they hold the latest stable version of the source files, while making sure that people can add new modifications in an organized manner.
+
+## Easy collaboration
+
+A new member joins your team and he needs to implement a major breaking change that will take them some time to perform in your application. Without a VCS, the other colleagues would need to stop working and wait for the new change to be added. Thanks to the VCS, however, the new joiner can get the latest working version and work without any rush.
+
+Colleagues can continue working and updating the VCS with their changes and, once your new member has finished his work, the VCS will help merge the new modification and then sort out any potential inconsistencies.
+
+## Access to modification history
+
+You may, by mistake, merge a change that has errors into the repository and it's not spotted during code review or in the pull request review. In this case, you can easily access the VCS' history and roll back to previous versions.
+You can also see for each file who made modifications and at what point in time, making it easier to ask for clarifications about the choices they made. Some VCS also provide easy comparison between different versions of a file, so you can notice what specific changes were made.
+
+## Ability to branch your work
+
+Consider you have a single main version of your software. A client wants a specific feature implemented only for them.
+Using a VCS, you can create a branch of your main repository, implement the feature, and deliver your software to that specific client. Once more changes are made to the main version, you can easily merge those modifications to the custom branch.
+Another benefit of branching is that you can develop new features in individual branches and, once finished, you can merge them into the main repository for a release.
+
+# Conclusion 🏁
+
+Version control systems are useful when working with software as well as all sorts of files that benefit from having stable versions, such as documents, and much more. Simply put, if one or more people are making changes on a file, it can help to control its versions using tools like Git.

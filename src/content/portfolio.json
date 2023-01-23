@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Hime Restaurant",
+    "description": "Point of Sales System build with ReactJS with Hooks and Context API",
+    "github": "https://github.com/iyansr/hime-restaurant",
+    "website": null,
+    "image": "https://ik.imagekit.io/iyansr/Iyan_s_Web/work/hime/image.png",
+    "stacks": [
+      "javascript",
+      "react",
+      "express",
+      "api"
+    ]
+  },
+  {
+    "name": "Ngobrol App",
+    "description": "Ngobrol is chat application that user track friends location, built with React Native integrated with Firebase and Mapbox",
+    "github": "https://github.com/iyansr/ngobrol-dong",
+    "website": null,
+    "image": "https://ik.imagekit.io/iyansr/Iyan_s_Web/work/ngobrol/image_AbTMJu2uYG.png",
+    "stacks": [
+      "javascript",
+      "react native",
+      "firebase"
+    ]
+  },
+  {
+    "name": "React Native To Do",
+    "description": "Simple To Do app built with React Native with Hooks and Context API",
+    "github": "https://github.com/iyansr/react-native-todo",
+    "website": null,
+    "image": "https://ik.imagekit.io/iyansr/Iyan_s_Web/work/to-do/image_pEafMzZ7O.png",
+    "stacks": [
+      "javascript",
+      "react native"
+    ]
+  }
+]
