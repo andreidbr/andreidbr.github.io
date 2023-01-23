@@ -1,17 +1,17 @@
-import { Eczar } from '@next/font/google';
+import robotoS from '@modules/shared/utils/font';
 import Link from 'next/link';
 
 import WorkCard from '@modules/shared/components/WorkCard';
 
 import { WorkProps } from '../home';
 
-const eczar = Eczar();
-
 const WorkSection = ({ works }: WorkProps) => {
   return (
     <section className="bg-bg-3">
       <div className="mx-auto max-w-6xl items-center px-4 py-20">
-        <h2 className={`${eczar.className} mb-10 text-4xl font-semibold text-earth-2`}>My Work</h2>
+        <h2 className={`${robotoS.className} mb-10 text-4xl font-semibold text-earth-2`}>
+          My Work
+        </h2>
 
         <div className="flex flex-col space-y-6">
           {works.slice(0, 3).map((file, index) => (

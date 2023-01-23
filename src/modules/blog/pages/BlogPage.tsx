@@ -2,7 +2,7 @@ import FeaturedPostCard from '@modules/shared/components/FeaturedPostCard';
 import Meta from '@modules/shared/components/Meta';
 import { Section } from '@modules/shared/components/Section';
 import { BlogExtended } from '@modules/shared/type';
-import eczar from '@modules/shared/utils/font';
+import robotoS from '@modules/shared/utils/font';
 
 type Props = {
   blogPosts: BlogExtended[];
@@ -19,12 +19,12 @@ const BlogPage = ({ blogPosts }: Props) => {
       <Section>
         <div className="py-12 text-center">
           <h2
-            className={`${eczar.className} text-5xl font-black text-earth-2 md:text-6xl lg:text-7xl`}
+            className={`${robotoS.className} text-5xl font-black text-earth-2 md:text-6xl lg:text-7xl`}
           >
-            MY ARTICLES
+            My Articles
           </h2>
           <p className="mt-4 text-sm font-medium text-earth-1 md:text-base lg:text-lg">
-            My thoughts and experiences on {'automation'} and much more.
+            My thoughts and experiences on automation and much more.
           </p>
         </div>
 

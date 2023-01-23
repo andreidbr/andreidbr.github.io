@@ -1,4 +1,4 @@
-import { Eczar } from '@next/font/google';
+import { Roboto_Slab } from '@next/font/google';
 
-const eczar = Eczar();
-export default eczar;
+const robotoS = Roboto_Slab();
+export default robotoS;

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import illu from '@modules/assets/andreidbr.png';
-import eczar from '@modules/shared/utils/font';
+import robotoS from '@modules/shared/utils/font';
 
 const HeroSection = () => {
   return (
@@ -13,9 +13,9 @@ const HeroSection = () => {
         </div>
         <div className="mt-6">
           <h1
-            className={`${eczar.className} mf:text-6xl text-center text-5xl font-semibold leading-tight text-earth-2 md:text-left`}
+            className={`${robotoS.className} mf:text-6xl text-center text-5xl font-semibold leading-tight text-earth-2 md:text-left`}
           >
-            {"I'm"} Andrei Dobra, a Test Automation Engineer
+            {"I'm"} Andrei Dobra, a Full Stack Test Automation Engineer
           </h1>
         </div>
       </div>

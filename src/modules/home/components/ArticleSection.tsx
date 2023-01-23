@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import FeaturedPostCard from '@modules/shared/components/FeaturedPostCard';
 import MiniPostCard from '@modules/shared/components/MiniPostCard';
-import eczar from '@modules/shared/utils/font';
+import robotoS from '@modules/shared/utils/font';
 
 import { ArticleProps } from '../home';
 
@@ -10,7 +10,7 @@ const ArticleSection = ({ blogPosts }: ArticleProps) => {
   return (
     <section className="bg-bg-2">
       <div className="mx-auto max-w-6xl items-center px-4 py-20">
-        <h2 className={`${eczar.className} mb-10 text-4xl font-semibold text-earth-2`}>
+        <h2 className={`${robotoS.className} mb-10 text-4xl font-semibold text-earth-2`}>
           My Articles
         </h2>
 

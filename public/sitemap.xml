@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://andreidobra.com</loc><lastmod>2023-01-23T09:16:18.100Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://andreidobra.com/blog</loc><lastmod>2023-01-23T09:16:18.100Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://andreidobra.com/resume</loc><lastmod>2023-01-23T09:16:18.100Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://andreidobra.com/work</loc><lastmod>2023-01-23T09:16:18.100Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://andreidobra.com/blog/create-simple-eth-wallet</loc><lastmod>2023-01-23T09:16:18.100Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://andreidobra.com/blog/array-slice-v-s-splice-once-and-for-all</loc><lastmod>2023-01-23T09:16:18.100Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://andreidobra.com</loc><lastmod>2023-01-23T13:51:45.561Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://andreidobra.com/blog</loc><lastmod>2023-01-23T13:51:45.561Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://andreidobra.com/resume</loc><lastmod>2023-01-23T13:51:45.561Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://andreidobra.com/work</loc><lastmod>2023-01-23T13:51:45.561Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://andreidobra.com/blog/sdlc-software-delivery-life-cycle</loc><lastmod>2023-01-23T13:51:45.561Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://andreidobra.com/blog/version-control-systems-basics</loc><lastmod>2023-01-23T13:51:45.561Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://andreidobra.com/blog/create-simple-eth-wallet</loc><lastmod>2023-01-23T13:51:45.561Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://andreidobra.com/blog/array-slice-v-s-splice-once-and-for-all</loc><lastmod>2023-01-23T13:51:45.561Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

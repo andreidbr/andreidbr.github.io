@@ -5,7 +5,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks';
 
 import Meta from '@modules/shared/components/Meta';
 import { Section } from '@modules/shared/components/Section';
-import eczar from '@modules/shared/utils/font';
+import robotoS from '@modules/shared/utils/font';
 
 type ResumePropps = {
   resumeContent: Resume;
@@ -19,7 +19,7 @@ const ResumePage = ({ resumeContent }: ResumePropps) => {
 
       <div className="py-12 text-center">
         <h2
-          className={`${eczar.className} text-5xl font-black text-earth-2 md:text-6xl lg:text-7xl`}
+          className={`${robotoS.className} text-5xl font-black text-earth-2 md:text-6xl lg:text-7xl`}
         >
           Resume
         </h2>

@@ -1,5 +1,4 @@
 import { format } from 'date-fns';
-import { DiscussionEmbed } from 'disqus-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -72,16 +71,6 @@ const BlogDetailPage = ({ blogPost }: BlogPageProps) => {
                   </div>
                 </div>
               </article>
-              <div className="px-6 md:px-12">
-                <DiscussionEmbed
-                  shortname={process.env.NEXT_PUBLIC_DISCUSS_ID as string}
-                  config={{
-                    title: blogPost.title,
-                    url: `${process.env.NEXT_PUBLIC_SITE_URL}${asPath}`,
-                    identifier: blogPost.slug,
-                  }}
-                />
-              </div>
             </div>
           </div>
         </div>
