@@ -27,7 +27,7 @@ const FeaturedPostCard = ({ post }: PostCardProps) => {
       <div className="p-6">
         <p className=" text-xs font-medium text-earth-1 md:text-sm">
           <span role="img">📅</span>&nbsp; {format(new Date(String(post.date)), 'dd MMM yyyy')} |{' '}
-          <span role="img">☕️</span>
+          <span role="img">⌛</span>
           &nbsp; {_readingTime.text}
         </p>
         <Link

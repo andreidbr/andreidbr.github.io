@@ -29,7 +29,7 @@ const BlogPage = ({ blogPosts }: Props) => {
         </div>
 
         <div className="grid gap-6 px-4 pb-12 md:grid-cols-3">
-          {blogPosts.slice(0, 4).map((post) => (
+          {blogPosts.map((post) => (
             <div key={post._id}>
               <FeaturedPostCard post={post} />
             </div>

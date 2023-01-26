@@ -27,7 +27,7 @@ const MiniPostCard = ({ post }: PostCardProps) => {
         <div className="">
           <p className="text-[9px] font-medium text-earth-1 md:text-xs">
             <span role="img">📅</span>&nbsp; {format(new Date(String(post.date)), 'dd MMM yyyy')} |{' '}
-            <span role="img">☕️</span>
+            <span role="img">⌛</span>
             &nbsp; {_readingTime.text}
           </p>
         </div>

@@ -61,7 +61,7 @@ const BlogDetailPage = ({ blogPost }: BlogPageProps) => {
                   <div className="mt-4">
                     <p className="text-sm text-gray-600">
                       <span role="img">📅</span>&nbsp;{' '}
-                      {format(new Date(blogPost.date), 'dd MMM yyyy')} | <span role="img">☕️</span>
+                      {format(new Date(blogPost.date), 'dd MMM yyyy')} | <span role="img">⌛</span>
                       &nbsp; {blogPost.readingTime.text as string}
                     </p>
                   </div>

@@ -1,7 +1,7 @@
 ---
 title: 'Black Box Testing: Basics, Advantages, and More'
 description: Learn the most important aspects about black box testing with examples
-thumbnail: 'https://andreidobra.com/images/posts/black-box-testing-basics/black-box-testing-header.png'
+thumbnail: 'https://andreidobra.com/images/posts/black-box-testing-basics/black_box_testing_header.png'
 keyword: 'testing, test, qa, quality assurance, black box, software testing, examples'
 date: '2023-01-23'
 tags: general
@@ -52,13 +52,13 @@ My test, which was more of a gray/white box example, can't be called a black box
 
 Now that we know what black box testing is and is not, let's see when and how we can implement this technique
 
-## When to implement black box testing
+### When to implement black box testing
 
 First up, it's important to know when black box testing is useful. Simply put, we can do tests based on this technique once the application is functional. If our calculator doesn't even have a graphical interface, we can't even execute our tests.
 
 Once the application's logic and interface starts taking shape, we can begin designing and running the black box tests because they can actually be ran and deliver results about the behavior of the application.
 
-## How to implement black box testing
+### How to implement black box testing
 
 As mentioned above, we now have an application with predictable behavior but how can we figure out what input to give the software and what output to expect? This takes us to the requirements and specification documents for the application.
 
@@ -72,7 +72,7 @@ The output can be tested against common knowledge, in the case of our calculator
 
 Once we have valid inputs and outputs, it's time to design the black box tests. We can use several techniques to make our test cases as efficient as possible.
 
-## Decision tables
+### Decision tables
 
 Decision tables structure the input and behavior in an easy to comprehend manner, making it very easy to validate the software under test.
 Such a table, which for our calculator can represent the order of operations, can look like this:
@@ -84,7 +84,7 @@ Such a table, which for our calculator can represent the order of operations, ca
 | addition, division       | division, addition       |
 | division, multiplication | multiplication, division |
 
-## Equivalence partitioning
+### Equivalence partitioning
 
 We use equivalence partitioning when deciding on the input of our tests. For our calculator, we know from the requirement that it only needs to support whole numbers, meaning operations with all other types of numbers should not be supported. As such, we have a partition of valid inputs ranging from `-9999...` to `9999...`.
 
@@ -92,7 +92,7 @@ We also have partitions of invalid inputs, such as numbers with decimals, like `
 
 Because we use equivalence partitioning, we can structure our inputs to be just whole numbers, for positive test cases, and decimal numbers, for negative test cases, where we check to see that the intended error happens.
 
-## Boundary value analysis
+### Boundary value analysis
 
 Boundary value analysis builds upon the partitions we have figured out when using equivalence partitioning. Basically, like the name suggests, we take the boundary values between the partitions and check that the intended behavior happens.
 
@@ -110,7 +110,7 @@ Based on these partitions, we devise representative test cases:
 | `1.9 + 2.0`     | fail because both are not whole      |
 | `2 + 2`         | pass because both are whole          |
 
-## Use case / User story testing
+### Use case / User story testing
 
 To implement these two techniques, you examine the use cases for the software or the user stories that drove the actual development and derive test cases based on the behavior described in them.
 A user story can look like:
