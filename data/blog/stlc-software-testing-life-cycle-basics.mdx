@@ -1,0 +1,105 @@
+---
+title: 'STLC (Software Testing Life Cycle): Phases, Entry & Exit Criteria'
+description: Get some practical knowledge about the STLC and how it helps structure all Quality Assurance efforts
+thumbnail: 'https://andreidobra.com/images/posts/sdlc-software-delivery-life-cycle/header.png'
+keyword: 'testing, test, qa, quality assurance, stlc, software testing'
+date: '2023-01-22'
+tags: general
+---
+
+The Software Testing Life Cycle (STLC) describes the sequence of activities for all quality assurance efforts. From analyzing the requirements, to executing the test cases and providing final metrics, it covers a lot of things.
+
+We've already talked thoroughly about the [Software Delivery Life Cycle (SDLC)](https://andreidobra.com/blog/sdlc-software-development-life-cycle 'Software Delivery Life Cycle') previously and we now go in-depth with the Testing sequence. As you'll see in this article, the Testing phase has its own life cycle, with entry and exit criteria for every one of them. As such, let's jump right into the cycle and see just what QA specialists need to know.
+
+- [What is the STLC? 🤔](#what-is-the-stlc-)
+- [STLC Phases 🔃](#stlc-phases-)
+  - [Requirement analysis](#requirement-analysis)
+  - [Test planning](#test-planning)
+  - [Test development](#test-development)
+  - [Test execution](#test-execution)
+  - [Test reporting](#test-reporting)
+  - [Defect management](#defect-management)
+  - [Test closure](#test-closure)
+- [Conclusion 🏁](#conclusion-)
+
+# What is the STLC? 🤔
+
+You may think that during the [testing phase](http://glossary.istqb.org/search/software%20lifecycle 'ISTQB Software Life Cycle definition') of the Software Development Life Cycle, you just start using the application and report errors. You would be wrong, however.
+
+Thinking that testers just push buttons and see what happens is a very naive way of thinking about the quality assurance process. Instead, to get the best results, you need to follow a plan, which is the STLC. Using this process, you start from the very beginning of a software's creation by studying the requirements and identifying how best to test the end result. After going through all the steps, you then reach the end of testing, where you document everything and showcase all the work that's been done.
+
+# STLC Phases 🔃
+
+You'll find quite a few variations on the STLC on the web but we're going to cover the seven most important phases that must happen if you want a great QA process.
+
+We will also talk in every phase about the entry and exit criteria, which are things that must be accomplished so that the process can begin and end successfully.
+
+![STLC Phases](https://andreidobra.com/images/posts/stlc-software-testing-life-cycle-basics/software-testing-life-cycle-diagram.png)
+
+## Requirement analysis
+
+Every piece of software begins with a requirement. The specification is then given to software developers, who go through their own SDLC. This is also where testers can start making an impact, as they can analyze the requirement and identify what is testable and in what ways.
+
+| Entry criteria                    | Exit criteria                                                                                                              |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Requirement documents             | General requirement traceability matrix (RTM) - document to track what requirements can be tested and in what general ways |
+| Architecture and design documents | Automation examination - document that examines in what ways testing can be automated                                      |
+| User acceptance criterias         | Requirement defects - defects regarding the requirements that should be discussed                                          |
+
+## Test planning
+
+Once you know what you are going to test, it's time to make a plan. The Test plan establishes the effort needed for the QA process, both in terms of money as well as people needed. You highlight what activities you will do (functional/automated/etc.), what tools you will use, what external resources you will need, and even possible training and knowledge transfer that is required for the team.
+
+| Entry criteria                                                 | Exit criteria                                                      |
+| -------------------------------------------------------------- | ------------------------------------------------------------------ |
+| Requirement traceability matrix (RTM)                          | Test plan and strategy with estimations regarding costs and effort |
+| Examination documents formulated during the Requirements phase | Approval from stakeholders (management, business, development)     |
+
+## Test development
+
+Here, the actual test cases start being created. Based on the test plan, you now know what you're testing and how. Now, it's time to start covering the requirements and the actual functionality of the application with tests. Besides actual test cases, you also create test data and start establishing pass and fail criteria.
+
+| Entry criteria                | Exit criteria                                                    |
+| ----------------------------- | ---------------------------------------------------------------- |
+| Test plan                     | Test cases and test data validated                               |
+| Risk and priority estimations | Requirements for test execution with approved pass/fail criteria |
+
+## Test execution
+
+After obtaining test cases, test data, and pass/fail criteria. and it's now time to execute them. First, you start to create your test environments and then do all of the prerequisite actions, from installing the application to setting up external resources. Then, it's time to run the tests developed in the previous phase.
+
+| Entry criteria                  | Exit criteria                        |
+| ------------------------------- | ------------------------------------ |
+| Requirements for test execution | Complete test execution environments |
+| Test data and test cases        | Executed test cases                  |
+
+## Test reporting
+
+After finally executing your test cases, it's time to see how they performed. In the reporting phase, you analyze what how the application performed during the tests and check for inconsistencies. Based on the reports, you start logging defects and seeking clarification to refine the test cases.
+
+| Entry criteria    | Exit criteria                                           |
+| ----------------- | ------------------------------------------------------- |
+| Test case reports | Test execution reports                                  |
+| Test evidence     | Defects and requests for clarification for stakeholders |
+
+## Defect management
+
+In this step, after the test case execution and reporting, it's time to manage the defects that were raised during the reporting phase. Here, testers clarify issues encountered with stakeholders and, most of the times, with developers who need to rectify the bugs. Expect a lot of back and forth and plenty of retesting to validate fixes for defects.
+
+| Entry criteria | Exit criteria            |
+| -------------- | ------------------------ |
+| Defects logged | Closed defects           |
+| Test reports   | Test performance metrics |
+
+## Test closure
+
+Since all the defects have been resolved and the metrics established, it's time to close the test activity. During this phase QA specialists document all the steps they've gone through, publish the results and give the go-ahead for any further steps.
+
+| Entry criteria               | Exit criteria                                            |
+| ---------------------------- | -------------------------------------------------------- |
+| Test results and reports     | Documentation for any future testing activities          |
+| Validation from stakeholders | Approval from all interested parties for testing closure |
+
+# Conclusion 🏁
+
+The Software Testing Life Cycle (STLC) may seem pretty complex but, in reality, it's a straightforward process. The phases roll neatly into one another and, as long as you keep track of your efforts, as well as the essential entry and exit criteria, you shouldn't have any issues in your testing stages.

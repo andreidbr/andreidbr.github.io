@@ -1,0 +1,128 @@
+---
+title: 'Black Box Testing: Basics, Advantages, and More'
+description: Learn the most important aspects about black box testing with examples
+thumbnail: 'https://andreidobra.com/images/posts/black-box-testing-basics/black-box-testing-header.png'
+keyword: 'testing, test, qa, quality assurance, black box, software testing, examples'
+date: '2023-01-23'
+tags: general
+---
+
+Black Box testing is one of the most important techniques for a quality assurance professional, no matter if they are specialized in manual or automation.
+
+As such, we need to make sure that we understand what it is, what it is not, and what techniques can help make our testing efforts as efficient as possible.
+
+- [What is black box testing? ⬛](#what-is-black-box-testing-)
+- [What black box testing is NOT ❌](#what-black-box-testing-is-not-)
+- [Implementing black box testing ✅](#implementing-black-box-testing-)
+  - [When to implement black box testing](#when-to-implement-black-box-testing)
+  - [How to implement black box testing](#how-to-implement-black-box-testing)
+- [Black box testing techniques 💡](#black-box-testing-techniques-)
+  - [Decision tables](#decision-tables)
+  - [Equivalence partitioning](#equivalence-partitioning)
+  - [Boundary value analysis](#boundary-value-analysis)
+  - [Use case / User story testing](#use-case--user-story-testing)
+- [Conclusion 🏁](#conclusion-)
+
+# What is black box testing? ⬛
+
+![Black box testing example structure](https://andreidobra.com/images/posts/black-box-testing-basics/black_box_testing_example.png)
+
+The black box we are referring to can represent anything that accepts input, from user actions to files and anything in between, and produces an output. To test something using this technique, we need to put ourselves in the shoes of the end user: we don't care about what happens in the box, what we care about is that the desired output appears when we give it the required input.
+
+The International Software Testing Qualification Board ([ISTQB](https://glossary.istqb.org/search/black%20box)) describes black box testing as "_Testing, either functional or
+non-functional, without reference to the internal structure of the component or system_".
+
+The same organization defines a black box testing technique as "_A procedure to derive and/or select test cases based on an analysis of the specification, either functional or non-functional, of a component or system without reference to its internal structure_".
+
+If I input into a calculator `2 + 2`, I don't care about what mathematical rules it uses behind the scenes, I care that the expected result is given, in our case `4`.
+
+# What black box testing is NOT ❌
+
+Once we know details about the internal logic of the software/application we are testing, we cross into [gray box](https://andreidobra.com/blog/gray-box-testing-basics/) and [white box testing](https://andreidobra.com/blog/white-box-testing-basics/) territories. This is not a bad thing but, to say that you are conducting black box testing while targeting specific scenarios that you know will may fail because you have looked at the source code is not true.
+
+For example, going back to the calculator: if I know that, behind the scenes, the order of operations may not be implemented as intended, I will input `2 + 2 / 2`.
+
+In correctly designed calculators, this will output `3`, because first `2 / 2` is executed, which results in `1`, and then `2 + 1` is executed to result in `3`.
+
+But because I saw in the source code that the order of operations was not implemented correctly, I knew that the faulty calculator will result in an incorrect result, such as `2`.
+
+My test, which was more of a gray/white box example, can't be called a black box test just because | gave an input and examined the output. For a full comparison between the "box" testing techniques, check out our full article about [Black vs. Gray vs. White Box Testing](https://andreidobra.com/blog/black-vs-gray-vs-white-box-testing/).
+
+# Implementing black box testing ✅
+
+Now that we know what black box testing is and is not, let's see when and how we can implement this technique
+
+## When to implement black box testing
+
+First up, it's important to know when black box testing is useful. Simply put, we can do tests based on this technique once the application is functional. If our calculator doesn't even have a graphical interface, we can't even execute our tests.
+
+Once the application's logic and interface starts taking shape, we can begin designing and running the black box tests because they can actually be ran and deliver results about the behavior of the application.
+
+## How to implement black box testing
+
+As mentioned above, we now have an application with predictable behavior but how can we figure out what input to give the software and what output to expect? This takes us to the requirements and specification documents for the application.
+
+Any software started out as a requirement that the developers had to implement. For our calculator, an initial specification could look like: `I want an application that can perform addition, subtraction, multiplication, and division on whole numbers.`
+
+This can already give us multiple test scenarios. We now the input, which are whole numbers, as well as the possible operations.
+
+The output can be tested against common knowledge, in the case of our calculator, but, to be more correct, against other documents that specify the expected behavior, such as a Test Oracle. If not, you can start digging for requirements and documentation that can explain the possible outputs of the software.
+
+# Black box testing techniques 💡
+
+Once we have valid inputs and outputs, it's time to design the black box tests. We can use several techniques to make our test cases as efficient as possible.
+
+## Decision tables
+
+Decision tables structure the input and behavior in an easy to comprehend manner, making it very easy to validate the software under test.
+Such a table, which for our calculator can represent the order of operations, can look like this:
+
+| Operation(s) chosen      | Operation order          |
+| ------------------------ | ------------------------ |
+| addition                 | addition                 |
+| subtraction, addition    | addition, subtraction    |
+| addition, division       | division, addition       |
+| division, multiplication | multiplication, division |
+
+## Equivalence partitioning
+
+We use equivalence partitioning when deciding on the input of our tests. For our calculator, we know from the requirement that it only needs to support whole numbers, meaning operations with all other types of numbers should not be supported. As such, we have a partition of valid inputs ranging from `-9999...` to `9999...`.
+
+We also have partitions of invalid inputs, such as numbers with decimals, like `1.3`. As such, we have invalid partitions for each whole number, ranging from `1.8` to `1.9999...`.
+
+Because we use equivalence partitioning, we can structure our inputs to be just whole numbers, for positive test cases, and decimal numbers, for negative test cases, where we check to see that the intended error happens.
+
+## Boundary value analysis
+
+Boundary value analysis builds upon the partitions we have figured out when using equivalence partitioning. Basically, like the name suggests, we take the boundary values between the partitions and check that the intended behavior happens.
+
+This are the partitions that we will use:
+
+| Invalid partition | Valid partition | Invalid partition |
+| ----------------- | --------------- | ----------------- |
+| 1.9               | 2               | 2.0               |
+
+Based on these partitions, we devise representative test cases:
+
+| Test case input | Expected result                      |
+| --------------- | ------------------------------------ |
+| `1.9 + 2`       | fail because one number is not whole |
+| `1.9 + 2.0`     | fail because both are not whole      |
+| `2 + 2`         | pass because both are whole          |
+
+## Use case / User story testing
+
+To implement these two techniques, you examine the use cases for the software or the user stories that drove the actual development and derive test cases based on the behavior described in them.
+A user story can look like:
+
+```
+As a user of the calculator
+I want to perform addition operations
+So that I can obtain correct results
+```
+
+Based on it, you create a test case for the addition functionality.
+
+# Conclusion 🏁
+
+These are just a few examples of black box testing techniques, so expect more articles in the future, delving deeper into this important aspect of quality assurance.

@@ -1,0 +1,93 @@
+---
+title: 'Gray Box Testing: Basics, Advantages, and More'
+description: Learn the most important aspects about gray box testing with examples
+thumbnail: 'https://andreidobra.com/images/posts/gray-box-testing-basics/gray-box-testing-header.png'
+keyword: 'testing, test, qa, quality assurance, gray box, software testing, examples'
+date: '2023-01-23'
+tags: general
+---
+
+Gray box testing (also spelled as grey box testing) is the middle ground of white box testing and black box testing. With advantages and disadvantages from both disciplines, it's important to know the most important aspects of this combination.
+
+Fortunately, this article covers the basics of gray box testing, as well as its advantages and disadvantages, not to mention some of the techniques that make you more efficient.
+
+- [What is gray box testing? ⬜ ➕ ⬛](#what-is-gray-box-testing---)
+- [When is gray box testing useful? 💡](#when-is-gray-box-testing-useful-)
+  - [Integration testing](#integration-testing)
+  - [Penetration testing](#penetration-testing)
+- [What are the advantages / disadvantages of gray box testing? ☯](#what-are-the-advantages--disadvantages-of-gray-box-testing-)
+  - [Advantages](#advantages)
+  - [Disadvantages](#disadvantages)
+- [Gray box testing techniques](#gray-box-testing-techniques)
+  - [Regression testing](#regression-testing)
+  - [Matrix testing](#matrix-testing)
+  - [Orthogonal Array Testing (OAT)](#orthogonal-array-testing-oat)
+- [Conclusion 🏁](#conclusion-)
+
+# What is gray box testing? ⬜ ➕ ⬛
+
+Gray box testing, like the name implies, is a combination of white and black box testing. What do you get when you combine white and black? Gray!
+
+[Black box testing](https://andreidobra.com/blog/black-box-testing-basics/) means you **do not know** what is happening inside the application. You only know that for some input you get specific output.
+
+[White box testing](https://andreidobra.com/blog/white-box-testing-basics/) means you **do know** what is happening inside the application. You follow the code as it processes input and generates output.
+
+What do you get when you combine these two disciplines? You get gray box testing, in which the tester has some knowledge about the internal structure of the software they are examining but does not have direct access to code, or at least not all of it.
+
+It's important to note that the International Software Testing Qualifications Board ([ISTQB](https://www.istqb.org/)) does not officially endorse gray box testing. However, in real life, this combination is quite popular.
+
+# When is gray box testing useful? 💡
+
+## Integration testing
+
+A great usage of gray box testing is when you are doing integration quality assurance. You know that two components are being linked together so you can device test cases that specifically target this integration.
+
+For example, you're examining a calculator's integration of addition (+) and subtraction (-). Because you know that these components are being integrated (from the white box testing side) you can now create test cases with specific input and then examine the output (from black box testing).
+
+## Penetration testing
+
+In penetration testing, for example with a website, you have access to some of the code, in form of the HTML, CSS, and JavaScript that is rendered by the web browser (white box).
+
+You do not have access to the server-side logic of the application, but this can still help you create some test cases that examine the security of the website and its output (black box).
+
+# What are the advantages / disadvantages of gray box testing? ☯
+
+## Advantages
+
+Gray box testing combines the benefits of both black and white box testing. You test out specific paths through the application with targeted inputs and outputs.
+
+You do not get bogged down by statistics like code coverage. Instead, you rely on testing end to end scenarios from a user perspective.
+
+Your test cases are also not coupled to the concrete logic of the code. Instead, it focuses on functionality that doesn't change all that often.
+
+It is done easily by testers who do not require advanced programming knowledge, like with white box testing.
+
+Because it does not require a lot of contributions from the developers, they are available to fix issues as soon as possible.
+
+## Disadvantages
+
+Doing only gray box testing means you may end up missing critical defects in the source code. These may not be very frequent but can end up costing a lot.
+
+You only know a partial bit about the code. As such, when defects do appear, it can be hard to pin down the exact source, unlike with white box testing.
+
+It can be easy to go too much into the direction of white or black box testing. You should not look too much or too little inside the code, as it can affect the quality of the test cases.
+
+# Gray box testing techniques
+
+## Regression testing
+
+Regression testing is a gray box technique because you know that the code has changed in a particular way. As such, you should test out the whole application to see if any new issues are now present because of that change.
+
+## Matrix testing
+
+Matrix testing, unfortunately, isn't about testing using the famous sci-fi movie. Instead, it puts all the different variables that affect an application into a table so that you can see what your test cases need to include.
+
+## Orthogonal Array Testing (OAT)
+
+In Orthogonal Array Testing (OAT) you combine the list of variables found during Matrix testing and come up with the lowest number of test cases that cover all the variables.
+
+# Conclusion 🏁
+
+Gray box testing is an important combination of white and black box testing. Knowing the basics, techniques, as well as the advantages and disadvantages means you can perform it as efficiently as possible.
+
+For a full comparison between the “box” testing techniques, check out our full article about [Black vs. Gray vs. White Box Testing](https://andreidobra.com/blog/black-vs-gray-vs-white-box-testing/).

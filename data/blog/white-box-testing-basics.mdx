@@ -1,0 +1,117 @@
+---
+title: 'White Box Testing: Basics, Advantages, and More'
+description: Learn the most important aspects about white box testing with examples
+thumbnail: 'https://andreidobra.com/images/posts/white-box-testing-basics/white-box-testing-header.png'
+keyword: 'testing, test, qa, quality assurance, white box, software testing, examples'
+date: '2023-01-23'
+tags: general
+---
+
+I'm sure you've heard the term of white box testing thrown around, but, like with many other complex terms, I'm also pretty sure that not a lot of people have complete knowledge about this topic.
+
+That's why I've decided to create a complete tutorial that explains what white box testing is, why it's important during for the quality assurance of any project, how to do it and what tools can make the process as efficient as possible. Of course, we'll also provide plenty of examples to gain a concrete understanding of the theoretical concepts.
+
+- [What is white box testing? ⬜](#what-is-white-box-testing-)
+- [How does is it different from black box testing? ⬛](#how-does-is-it-different-from-black-box-testing-)
+- [Why is white box testing so important? 💡](#why-is-white-box-testing-so-important-)
+- [What advantages/disadvantages does white box testing have? ☯](#what-advantagesdisadvantages-does-white-box-testing-have-)
+  - [Advantages](#advantages)
+  - [Disadvantages](#disadvantages)
+- [How to perform efficient white box testing? 🤔](#how-to-perform-efficient-white-box-testing-)
+  - [Get to know the code](#get-to-know-the-code)
+  - [Use coverage tools](#use-coverage-tools)
+  - [Split the tasks between developers and testers](#split-the-tasks-between-developers-and-testers)
+- [Conclusion 🏁](#conclusion-)
+
+# What is white box testing? ⬜
+
+![White box testing example structure](https://andreidobra.com/images/posts/white-box-testing-basics/white-box-testing-example.png)
+
+As opposed to black box testing, which we've already covered in a previous article, white box testing is a methodology in which the tester knows the actual internal structure of the application/software that needs to be evaluated. Also known as clear box, open box or glass box testing, this discipline relies on assuring the quality of the code and the structure of the target application.
+
+The International Software Testing Qualification Board ([ISTQB](https://glossary.istqb.org/search/white%20box)) describes white box testing as "_Testing based on an analysis
+of the internal structure of the component or system_" while a white box testing technique is defined as "_A procedure to derive and/or select test cases based on an analysis of the internal structure of a component or system_".
+
+# How does is it different from black box testing? ⬛
+
+While performing black box testing, the tester has no knowledge about the internal working of the software that they are evaluating. Instead, they only check what output is delivered when inserting specific input.
+
+With white box testing, however, we are specifically looking at the internal structure of the software that we are evaluating. Instead of just checking the output with a certain input, we are looking at the whole logic behind the scenes, ensuring that the actual output has been delivered correctly to the user, and not by mistake.
+
+For a full comparison between the “box” testing techniques, which also covers [gray box testing](https://andreidobra.com/blog/gray-box-testing-basics/), check out our full article about [Black vs. Gray vs. White Box Testing](https://andreidobra.com/blog/black-vs-gray-vs-white-box-testing/).
+
+This is a major test strategy shift, but is it actually important to do white box testing? Let's find out.
+
+# Why is white box testing so important? 💡
+
+Imagine you are testing a payment system that's supposed to handle all sorts of currencies and amounts of money, taking a fee, and then forwarding the payment to the recipient.
+
+If you're doing black box testing, you would probably use the requirements to create a huge number of test cases that cover all the possible types of currencies, from dollars to euros and much more, not to mention various amount formats.
+
+However, if you can do white box testing, you can examine the internal structure of the various components that handle currency exchange as well as the amount parsing. You can see how these two systems interact and create scenarios that specifically target this integration.
+
+One test case might include a payment of 10,000 USD that needs to be sent to a recipient who wants to receive the money in EUR. Once you know the inner workings, you can do more. You can examine that the correct exchange is made. That the fees are processed, and that the new amount is sent to the end customer.
+
+Do you see how being more focused is important? Instead of producing a huge amount of black box test cases in which we only examine the output amount, we can do additional checks along the way, ensuring that the system behaves as expected behind the scenes, not just for the end user.
+
+# What advantages/disadvantages does white box testing have? ☯
+
+So, we know why white box testing is important, but does it have the right mix of advantages and disadvantages for our situation? Let's have a brief look at these two categories.
+
+## Advantages
+
+Testers examine the actual systems, components, and code to understand the inner working of the software that they are evaluating. This benefits not only them but the actual application, because more eyes can spot more defects.
+
+Developers need to explain the decisions they took and, even if they did code review, they will probably have to make further modifications to enhance readability, thereby improving the code once again.
+
+You can create fewer but more focused tests that cover specific scenarios, instead of many ambiguous ones that may or may not expose internal bugs.
+
+Seeing the actual code makes automation possible, as you know exactly how a test framework can hook into and communicate with the target software.
+
+Exact metrics are possible, as there are different tools to track the coverage of the code by the actual tests. Instead of giving rough estimates, you have clear numbers that you can then provide to stakeholders, such as managers or business representatives.
+
+Another advantage would be that you can start creating white box test cases alongside the programmers at the start of the software development life cycle (SDLC). As they are writing the code, you can make your own scenarios that target the newly created functionalities.
+
+## Disadvantages
+
+Depending on the complexity of the software and its code, testers will need thorough programming skills. Especially on legacy or monolithic systems, it can be downright impossible for a regular tester to understand everything that's happening behind the scenes.
+
+Also, it may not even be worth it to achieve complete code coverage. Priority must be given to critical systems and paths that are always used, instead of corner cases that may not even happen in the real world.
+
+Test cases may be coupled too tightly with the code in that current version of the software. If a major refactoring is done by the development team, then some of these faulty test cases may fail, as they relied on specific conditions in the code. A good balance can be tough to find.
+
+Because exact metrics like code coverage are possible, you may end up chasing higher and higher numbers. This can be either by choice or because you are forced by management. As such, it's important to know when to settle down and use a better approach to actually find problems.
+
+# How to perform efficient white box testing? 🤔
+
+We now know why white box testing is very useful, especially for more complex systems. Now, it's time to see how to actually do it and, most importantly, do it in an efficient manner thanks to different tools that can make our lives easier.
+
+## Get to know the code
+
+The first and pretty obvious first step is to actually get to know the inner workings of the software that we are testing. This means getting to examine the systems, components, and even code that drives everything behind the "curtain". You cannot create focused test cases without actually knowing what you are focusing on.
+
+This can be hard, especially for testers that don't have programming experience. It's better to use Automation engineers or have senior developers slowly walk QA people through the code, as they have more experience.
+
+## Use coverage tools
+
+Once you have an understanding of the code, you can begin creating test cases that cover as much as possible. To help you in this effort, you can use code coverage tools. These track the execution of specific portions of the source code during a test.
+
+Code coverage tools can be quite varied, as every programming language has its own specific implementations. Integrated development environments (IDEs) like IntelliJ IDEA for Java or Visual Studio for C# provide built-in tools. You can check out this great article from [Stackify](https://stackify.com/code-coverage-tools/) about some popular third-party tools.
+
+Based on these tools, you can see what code components, such as branches, control flows, and statements you cover with your tests. Then, you can create more scenarios that execute less obvious components of the software, thus achieving increased coverage.
+
+## Split the tasks between developers and testers
+
+It's also important to divide tasks between the developers and the actual testers. Usually, programmers handle the actual **unit tests**, which target specific methods/functions inside their code. These should be quick to execute and enforce specific behavior.
+
+One step higher is **component testing**, in which you combine multiple already-tested units. Here is where testers can help out the developers and provide more insight.
+
+Then there's **integration testing**, in which you bring together components to achieve even more complex tasks. Testers knowing functional requirements come into play and should provide the end goals for these specific test cases.
+
+Finally, there's **system integration**, when you put together the whole system. The test scenarios, written now mostly by the QA engineers, need to cover as much as possible while delivering the expected output.
+
+# Conclusion 🏁
+
+To sum things up, white box testing is a crucial aspect of the quality assurance process. Only if you examine the code and design your test scenarios to cover as much as possible can you be sure of its functionality.
+
+With the topics in this article, you're equipped to perform white box testing in an efficient and focused manner, while easily explaining to others just how important and advantageous such a strategy is.

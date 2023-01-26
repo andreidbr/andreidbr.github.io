@@ -1,0 +1,73 @@
+---
+title: 'Black vs. Gray vs. White Box Testing: Which to Use and When'
+description: Learn the most important use cases for each type of "box" testing with examples
+thumbnail: 'https://andreidobra.com/images/posts/black-vs-gray-vs-white-box-testing/black-gray-white-box-testing-header.png'
+keyword: 'testing, test, qa, quality assurance, black box, white box, gray box, software testing, examples'
+date: '2023-01-24'
+tags: general
+---
+
+It's tricky to find the best testing technique when you embark on the creation of a test plan. You can choose from black to gray to white box testing. You can then pick between their own individual procedures. But, most of the times, it's tough to decide which of them is the most efficient.
+
+After talking in depth about each of these disciplines in their own articles, it's time to pit them one against the other and see which testing should be used in which scenario. So, no matter if you're black, white, or gray, let's jump in and see what's what.
+
+- [Definitions for each testing type 🔎](#definitions-for-each-testing-type-)
+- [Examples for each box 👀](#examples-for-each-box-)
+  - [Black box test cases](#black-box-test-cases)
+  - [Gray box test cases](#gray-box-test-cases)
+  - [White box test cases](#white-box-test-cases)
+- [Balance is key ⚖](#balance-is-key-)
+- [Conclusion 🏁](#conclusion-)
+
+# Definitions for each testing type 🔎
+
+First, let's remind ourselves what each colored “box” represents in terms of quality assurance. Remember that we have detailed articles about each of them linked below.
+
+- [Black box testing](https://andreidobra.com/blog/black-box-testing-basics/): The tester doesn't know what is happening inside the application. They only check the input and output.
+- [Gray box testing](https://andreidobra.com/blog/gray-box-testing-basics/): The tester has some knowledge of what is happening inside the application. They create targeted test cases based on that knowledge to verify functionality.
+- [White box testing](https://andreidobra.com/blog/white-box-testing-basics/): The tester has full knowledge of what is happening inside the application. You can create many test cases that target specific units, components, the integration between those components, as well as the interaction of the software with the system overall.
+
+It's also important to not forget that, in the theory of the [ISTQB](https://glossary.istqb.org/search/test%20case), a test case is defined as "_a set of preconditions, inputs, actions (where applicable), expected results and postconditions, developed based on test conditions._"
+
+# Examples for each box 👀
+
+![Working with different types of box testing can be frustrating](https://andreidobra.com/images/posts/black-vs-gray-vs-white-box-testing/box-testing-meme.jpg)
+
+Let's use a simple example of a website that features a calculator. Let's confirm that the main requirement is: `Users can perform simple operations (addition, substraction, division, multiplication) on whole numbers`.
+
+## Black box test cases
+
+Here, we can use techniques like decision tables, equivalence partitioning and boundary value analysis. Given we're only interested in the input and output, we can create tests such as:
+
+- Testing addition like: `1 + 1 = 2`
+- Testing addition and subtraction: `1 - 1 = 0`
+- Negative testing with decimals to see the correct error: `1.9 \* 2.0`
+
+## Gray box test cases
+
+Here, we can inspect the source of the web page that hosts the calculator. This gives us some insight into what is happening behind the scenes, even if computations are done on a server. We are no longer interested just in input and output but also in behavior. We can then create more focused test cases like:
+
+- Testing how the calculator performs when the page is refreshed or still loading.
+- Checking how the calculator handles malicious inputs like scripts or database queries (SQL injection).
+- Testing if the backend functionality can be used by other websites than the official one
+
+## White box test cases
+
+Here, we know the source code of the calculator page as well as the software running on the server that's powering the application. We can now create highly specific test cases such as:
+
+- Tests for specific methods and small-scale functionality (aka unit tests) like: addition of whole numbers, addition of negative numbers, etc.
+- Checks for larger pieces of the code that provide larger scale functionality (aka components tests) like: broader addition/subtraction/multiplication/etc. scenarios.
+- Tests for end-to-end scenarios that cover as much of the code as possible (aka integration testing): combining addition, subtraction, multiplication in overarching test cases.
+- Tests for production-like conditions with different external factors (this can go in system testing, user accepting testing, and other such categories) like: installing on less powerful infrastructure and checking performance.
+
+# Balance is key ⚖
+
+When it comes to quality assurance, there's no gold standard for colored boxes. Instead, you need to know black, gray, and white box testing and the scenarios in which they are useful. Knowing their advantages and disadvantages, as well as their own techniques is crucial if you want to create a test plan that covers as many things as possible.
+
+In my experience, the black box is a good starting point if you're tasked with testing software that already exists in a functional form. You can then slowly migrate to gray box and, once you inspect all of the inner workings, you are firmly in white box territory.
+
+However, if work has just started on the software you're testing, start with white box. Also, if developers are receptive, also consider implementing test-driven development. Once the application starts coming together, you can go towards gray box. If you're doing a good job, there may not even be a need for black box tests, as everything is covered by previous work.
+
+# Conclusion 🏁
+
+Knowing the differences between black, gray, and white box testing can be a bit confusing at first, but I hope that with these concrete examples, you can see that real life isn't that complex. Try to remember the degree of knowledge about application logic needed for each color and you shouldn't have that many problems.
