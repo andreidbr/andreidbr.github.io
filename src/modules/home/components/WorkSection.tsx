@@ -1,8 +1,6 @@
 import robotoS from '@modules/shared/utils/font';
 import Link from 'next/link';
-
 import WorkCard from '@modules/shared/components/WorkCard';
-
 import { WorkProps } from '../home';
 
 const WorkSection = ({ works }: WorkProps) => {
