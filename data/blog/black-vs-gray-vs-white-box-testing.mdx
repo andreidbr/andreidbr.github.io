@@ -35,7 +35,7 @@ It's also important to not forget that, in the theory of the [ISTQB](https://glo
 
 Let's use a simple example of a website that features a calculator. Let's confirm that the main requirement is: `Users can perform simple operations (addition, substraction, division, multiplication) on whole numbers`.
 
-## Black box test cases
+### Black box test cases
 
 Here, we can use techniques like decision tables, equivalence partitioning and boundary value analysis. Given we're only interested in the input and output, we can create tests such as:
 
@@ -43,7 +43,7 @@ Here, we can use techniques like decision tables, equivalence partitioning and b
 - Testing addition and subtraction: `1 - 1 = 0`
 - Negative testing with decimals to see the correct error: `1.9 \* 2.0`
 
-## Gray box test cases
+### Gray box test cases
 
 Here, we can inspect the source of the web page that hosts the calculator. This gives us some insight into what is happening behind the scenes, even if computations are done on a server. We are no longer interested just in input and output but also in behavior. We can then create more focused test cases like:
 
@@ -51,7 +51,7 @@ Here, we can inspect the source of the web page that hosts the calculator. This 
 - Checking how the calculator handles malicious inputs like scripts or database queries (SQL injection).
 - Testing if the backend functionality can be used by other websites than the official one
 
-## White box test cases
+### White box test cases
 
 Here, we know the source code of the calculator page as well as the software running on the server that's powering the application. We can now create highly specific test cases such as:
 

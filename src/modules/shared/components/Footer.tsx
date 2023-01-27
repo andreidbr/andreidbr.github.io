@@ -12,7 +12,7 @@ const Footer = () => {
         <Link href="https://iyansr.id/" className="font-bold text-biru-1">
           Iyan Saputra
         </Link>{' '}
-        and modified by
+        and modified by{' '}
         <Link href="/" className="font-bold text-biru-1">
           Andrei Dobra
         </Link>
