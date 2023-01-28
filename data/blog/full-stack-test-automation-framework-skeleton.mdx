@@ -1,0 +1,74 @@
+---
+title: 'Full Stack Test Automation Framework Skeleton: How to Use It'
+description: Use this simple frontend & backend project to kickstart your new automation frameworks
+thumbnail: 'https://andreidobra.com/images/work/test-automation-framework-skeleton-header.png'
+keyword: 'automation, framework, frontend, backend, java, testng, selenium, rest assured, github, testing, test, qa, quality assurance, software testing'
+date: '2023-01-27'
+tags: 'automation'
+---
+
+Sooner or later, every test automation engineer will be faced with the task of creating a new framework from scratch to deliver test automation for an application that's available on frontend, backend, or both.
+
+To make their lives easier, I decided to create a simple [full stack test automation framework project on GitHub](https://github.com/andreidbr/test-automation-framework-skeleton) that includes the essential dependencies, such as TestNG, Selenium, or Rest Assured. It aims to deliver a solid base onto which you can quickly start writing your test logic.
+
+In this article, I want to explain how exactly I developed the framework and, most importantly, how to use it.
+
+- [How I did it 🧐](#how-i-did-it-)
+- [How to use it 💪](#how-to-use-it-)
+  - [Prerequisites](#prerequisites)
+  - [Running the tests](#running-the-tests)
+- [Conclusion 🏁](#conclusion-)
+
+# How I did it 🧐
+
+I had the idea of a base test automation framework for quite a while, however, work duties meant that I usually needed to spend time in already-existing frameworks, understanding their logic and building on top of them new functionality. However, now that I've recently changed projects, I was again faced with the need to build a fresh framework. As such, this is the perfect time to create this helper project.
+
+I started with a simple [Maven quickstart archetype](https://maven.apache.org/archetypes/maven-archetype-quickstart/) that automatically generates the most important things in a Java project, from basic folder structure to a program class and a unit test class, not to mention the actual `pom.xml` file that is used for dependency management.
+
+I then cleaned up the `pom.xml` file by removing the pre-defined jUnit dependency, added a few extra lines to confirm the usage of Java 17, and then added the most important dependencies I knew I needed. These are:
+
+- TestNG: for a simple yet powerful test running experience
+- Selenium: for browser-based front-end UI-focused tests
+- RestAssured: for backend API-focused tests
+- SLF4J with Log4j2: for logging and log management
+
+Also using Maven, I added the two essential plugins configured for a distinct testing experience:
+
+- Surefire: the default unit testing plugin that is configured to run all classes that end in ApiTests
+- Failsafe: the integration testing plugin that is configured to run all classes that end in UiTests
+
+I also opted to add some additional "nice to have" features, in the form of:
+
+- Latest version of Selenium included, which requires no extra configuration for external files like chromedriver
+- `src/test/resources/log4j2.properties` file that formats the text printed out to the console and saves a log file to the target/logs folder
+- Maven Failsafe plugin also generates a set of test reports at the end of execution in different formats: HTML & XML.
+- `.gitignore` configured for Java projects
+- `intellij-java-google-style.xml` to provide a custom code style formatter via IntelliJ.
+
+# How to use it 💪
+
+### Prerequisites
+
+Before using it, there are a few prerequisite steps you need to fulfill:
+
+- Java JDK 17 installed
+- Apache Maven installed
+- Google Chrome installed. If you use other browsers, you will need to modify the webdriver instantiated in `src/test/java/com/andreidobra/FrontEndUiTests.java`
+- Optional: IntelliJ Community Edition installed
+
+### Running the tests
+
+By default, you can use Maven to run the two sample tests I included in the project, for backend and frontend scenarios. In the folder of the repositoy, open a new terminal window and input the following commands:
+
+- `mvn test` will run the Surefire plugin and execute all tests that are in classes that end in ApiTests. No UI tests will be executed.
+- `mvn verify` will run the Failsafe plugin and execute all the API tests, just like mvn test as well as all the UI tests which are included in classes that end in UiTests.
+
+Why is this separation in place? Ideally you want unit tests to be under the `test` command. These should be fast, reliable, and if they break, they should stop everything.
+
+You also want integration tests or those that rely on more dependencies (such as a web browser) to be under the `integration-test` or `verify` commands. These can take longer to execute and, if they break, their failure should just be added to the test report at the end of the whole test suite execution.
+
+If you don't agree with this, modify the plugins inside the `pom.xml` file to suit your own preferences.
+
+# Conclusion 🏁
+
+Feel free to clone the repository from GitHub and kickstart your fresh test automation framework with it. In case you have any suggestions or improvement ideas, feel free to open an issue. I'd love to see what you can do with this base, so also feel free to show me your work.

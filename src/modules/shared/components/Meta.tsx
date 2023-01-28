@@ -15,7 +15,7 @@ const Meta = ({
   image = 'https://avatars.githubusercontent.com/u/12015956?v=4',
   keywords = 'andrei dobra, testing, qa, automation, sdet, blog',
 }: MetaProps) => {
-  const titleExtended = `${title} | andreidobra.com`;
+  const titleExtended = `${title} | AndreiDobra.com`;
 
   return (
     <Head>

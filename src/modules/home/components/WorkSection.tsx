@@ -12,7 +12,7 @@ const WorkSection = ({ works }: WorkProps) => {
         </h2>
 
         <div className="flex flex-col space-y-6">
-          {works.slice(0, 3).map((file, index) => (
+          {works.map((file, index) => (
             <WorkCard file={file} key={String(index)} />
           ))}
         </div>
