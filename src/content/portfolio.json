@@ -3,7 +3,7 @@
     "name": "Test Automation Framework Skeleton",
     "description": "A simple test automation project that can be used as a base for new frameworks",
     "github": "https://github.com/andreidbr/test-automation-framework-skeleton",
-    "website": null,
+    "website": "https://andreidobra.com/blog/full-stack-test-automation-framework-skeleton",
     "image": "https://andreidobra.com/images/work/test-automation-framework-skeleton-header.png",
     "stacks": ["java", "testng", "selenium", "restassured"]
   }

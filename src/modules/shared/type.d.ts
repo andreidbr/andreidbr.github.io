@@ -6,7 +6,7 @@ export type WorkType = {
   name: string;
   description: string;
   github: string;
-  website: null;
+  website: string;
   image: string;
   blurDataURL?: string;
   stacks: string[];
