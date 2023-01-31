@@ -18,7 +18,7 @@ const HomePage = ({ blogPosts, works }: HomeProps) => {
     <Fragment>
       <Meta
         title="Andrei Dobra"
-        description="A Full Stack Test Automation Engineer who remains curious and eager to help others learn and develop their skills."
+        description="A Full Stack Test Automation Developer who remains curious and eager to help others learn and develop their skills."
       />
 
       <DynamicHero />

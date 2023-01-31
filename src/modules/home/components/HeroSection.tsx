@@ -15,7 +15,7 @@ const HeroSection = () => {
           <h1
             className={`${robotoS.className} mf:text-6xl text-center text-5xl font-semibold leading-tight text-earth-2 md:text-left`}
           >
-            {"I'm"} Andrei Dobra, a Full Stack Test Automation Engineer
+            {"I'm"} Andrei Dobra, a Full Stack Test Automation Developer
           </h1>
         </div>
       </div>
