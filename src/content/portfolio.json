@@ -1,5 +1,13 @@
 [
   {
+    "name": "My YouTube channel",
+    "description": "The place where I upload all sorts of interesting videos",
+    "github": "#",
+    "website": "https://www.youtube.com/c/AndreiDobra",
+    "image": "https://andreidobra.com/images/work/andrei-dobra-youtube-channel-thumbnail.png",
+    "stacks": ["youtube", "video", "tutorial"]
+  },
+  {
     "name": "Test Automation Framework Skeleton",
     "description": "A simple test automation project that can be used as a base for new frameworks",
     "github": "https://github.com/andreidbr/test-automation-framework-skeleton",
