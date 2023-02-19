@@ -1,0 +1,100 @@
+---
+title: 'How to Test ChatGPT: Manual, Automated, and More'
+description: Here's how you can test out the new chatbot powered by AI and ML
+thumbnail: 'https://andreidobra.com/images/posts/how-to-test-chatgpt-manual-automated-more/testing_chat_gpt_header.png'
+keyword: 'automation, chatgpt, ai, ml, chatbot, manual, performance, testing, test, qa, quality assurance, software testing'
+date: '2023-02-19'
+tags: 'automation'
+---
+
+ChatGPT, the new chatbot powered by Artificial Intelligence and Machine Learning from OpenAI,has taken the world by storm for the past few months, offering what seems to be the first conversational AI experience that any human can use and, most importantly, would **want** to use.
+
+This last part is essential, since the information supplied by Chat GPT is actually useful and not just regurgigated details from the first page of the Google results associated with the input question.
+
+The fact that it works so seamless and can refine its output based on further clarification or demands, can make Chat GPT seem _magical_.
+
+Let's not forget, however, that this is still a tool developed by the team at OpenAI and, like with any application, testing is needed to ensure things work as intended and that users are getting what they expect from it.
+
+Given its almost magical nature, how do you actually test such a tool? I've racked my brain a bit and have come up with multiple scenarios that would verify Chat GPT's functionality, via both manual as well as automated means.
+
+In case you prefer a more interactive version of this article, check out the video below.
+
+<iframe
+  class="video"
+  src="https://www.youtube.com/embed/1cuCYJX3PJ8"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+></iframe>
+
+- [What does ChatGPT have to say about testing? 🤖](#what-does-chatgpt-have-to-say-about-testing-)
+- [Functional testing ✔](#functional-testing-)
+  - [Black box testing](#black-box-testing)
+  - [Smoke testing](#smoke-testing)
+- [Automated testing 🔃](#automated-testing-)
+  - [UI testing](#ui-testing)
+  - [Performance and additional testing](#performance-and-additional-testing)
+- [Conclusion 🏁](#conclusion-)
+
+# What does ChatGPT have to say about testing? 🤖
+
+Before jumping into my actual suggestions, I thought that it would be nice to first ask Chat GPT itself how it would like to be tested. After all, it has a huge data set behind it and I'm sure that among all that information there are details related to testing huge Artificial Intelligence or Machine Learning projects.
+
+![ChatGPT's suggestions about testing](https://andreidobra.com/posts/how-to-test-chatgpt-manual-automated-more/chatgpt_testing_suggestions.png)
+
+As you can see, it starts with some pretty generic types of testing applicable to any application. It then extrapolates some of these ideas to come up with black box testing, and then with non-functional testing aka performance testing, and finally ends with the _classic_: ask the users how they feel about the app's quality.
+
+# Functional testing ✔
+
+Enough about an AI's notions about testing, let's use our old squishy monkey brain to come up with a few ideas.
+
+Much like its first suggestion, we can start with a broad black box approach. We input some data and examine the output to see if it conforms to our requirements. With an ML project, however, output can fluctuate in enormous ways, almost as big as the training data used by OpenAI. However, that doesn't mean we can't analyze the output.
+
+### Black box testing
+
+First, the languages supported. Here, we go into the realm of internationalization. Is the text outputted relatively correct or just gibberish?
+
+Some outputs and role-playing will lead to intentional grammar errors, so we can try to see if the output reaches a certain percent of legibility. We already have other ML tools like Grammarly that we can use to rate the output.
+
+Other scenarios where outputs have similar elements: asking chatgpt for illegal information, such as the recipes of drugs or how to do unethical things. In these situations, OpenAI hardcoded stops to prevent the tool from giving relevant but not intended details.
+
+Another impressive and maybe scary feature is the capability of Chat GPT to generate working code. We can do a bit of testing here, asking it to generate something in a specific language, taking the output and running it through a static checking tool to at least verify that it may work if it is compiled.
+
+For those less exposed to security testing, always treat code you didn't write with maximum scrutiny, as you never know what unintended side effects it may have on your machine.
+
+### Smoke testing
+
+For some general smoke testing, we can have a batch of prompts that check that:
+
+- Information is given
+- Information is useful
+- Information respects specific prompts, such as role-playing
+
+One key feature of chatgpt is the ability to refine/refactor previously given answers based on additional demands or details. As such, we can also extend these general prompts to contain multiple steps and gauge again the aforementioned points.
+
+# Automated testing 🔃
+
+In terms of automation, without knowing that much about the inner workings of the whole system, we can just speculate a few things.
+
+### UI testing
+
+First and foremost, general UI functionality can easily be checked with the likes of Selenium. Verify elements are present, interactable, and do that they need to do.
+
+We can also extend this UI automation to help in smoke testing, as we can load up a set of prompts, execute them, and then the output gets stored in a central location, so that it can examined by humans for correctfulness.
+
+Other places where we can attempt automated testing include, of course, the integration and system ones. We can target the platform and its dependencies to ensure things are working smoothly after every release/deploy.
+
+### Performance and additional testing
+
+We can also throw in some automated chaos testing, turning off essential systems to see if recovery is happening as expected.
+
+Given that chat gpt is an application built to be accessed by all users of the world wide web, performance testing is also essential. After simulating a huge influx of users, we check to see if answers are given within pre-defined performance parameters (speed, accuracy, etc.).
+
+For example, I caught Chat GPT right in such a period of inactivity where it had to wait about 25 seconds until it loaded the next pieces of the text prompt.
+
+# Conclusion 🏁
+
+While Chat GPT seems like one of the best contenders for the biggest tech breakthrough in the last decade or so, at the end of the day, applying basic testing to it isn't that hard.
+
+I'm sure that the OpenAI team has a wide array of testing methods for their application but using the examples I gave above, we can at least gauge to a certain amount the quality of the experience offered by their chatbot.
