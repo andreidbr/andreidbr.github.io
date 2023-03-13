@@ -1,0 +1,175 @@
+---
+title: 'Cucumber BDD: Advantages & Disadvantages explained with free skeleton repo'
+description: Learn about the pros and cons of the popular framework with hands-on examples
+thumbnail: 'https://andreidobra.com/images/posts/cucumber-automation-framework-skeleton-header.png'
+keyword: 'automation, cucumber, bdd, java, selenium, rest assured, framework, repo, manual, testing, test, qa, quality assurance, software testing'
+date: '2023-03-13'
+tags: 'automation'
+---
+
+Cucumber is the most widely used Behavior-Driven Development framework out there, enabling delivery teams to use common language to describe functionality, implement it, and then verify it easily.
+
+However, many teams and people jump into the BDD experience without a plan and quickly end up in a bad situation with wasted time & effort.
+
+In this article, I'll talk a bit about the use case for Cucumber, and explain its advantages and disadvantages using a [free skeleton repository with a test automation framework that uses BDD for front-end and back-end tests](https://github.com/andreidbr/cucumber-java-skeleton-enhanced).
+
+In case you prefer a more interactive version of this article, check out the video below.
+
+<iframe
+  class="video"
+  src="https://www.youtube.com/embed/tF8dsGpCBgI"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+></iframe>
+
+- [What is BDD? 🔎](#what-is-bdd-)
+- [How does Cucumber deliver BDD 🥒](#how-does-cucumber-deliver-bdd-)
+- [How it helps manual testers 🔧](#how-it-helps-manual-testers-)
+- [How it helps automation testers 🤖](#how-it-helps-automation-testers-)
+- [Actually using Cucumber ⚙](#actually-using-cucumber-)
+- [My own Cucumber Java skeleton framework 💡](#my-own-cucumber-java-skeleton-framework-)
+- [Advantages ➕](#advantages-)
+  - [Easy to understand](#easy-to-understand)
+  - [Promotes reusability](#promotes-reusability)
+  - [Promotes flexibility and parametrization](#promotes-flexibility-and-parametrization)
+  - [Tags enable targeted testing](#tags-enable-targeted-testing)
+  - [Lots of helper libraries and integrations](#lots-of-helper-libraries-and-integrations)
+- [Disadvantages ➖](#disadvantages-)
+  - [Maintainability](#maintainability)
+  - [Implementation quality can fluctuate](#implementation-quality-can-fluctuate)
+  - [Technical limitations](#technical-limitations)
+- [Conclusion 🏁](#conclusion-)
+
+# What is BDD? 🔎
+
+Software development doesn't just magically happen. Usually, the code is written based on a set of requirements that describe a certain behavior.
+
+Behavior-Driven Development is a methodology that takes this approach to the next level, describing how development as well as testing can start from a set of plain features that the application should deliver to users.
+
+These plain features describe the behavior of the software in the form of scenarios and are written in a common syntax so that they all sound similar and are easy to understand, no matter who is writing the actual files.
+
+BDD helps lots of people:
+
+- Product Owners & Business Analysts can describe their desired functionality easily
+- Developers can have a clear functionality in mind when they start coding
+- Testers can see exactly what functionality they should be verifying when checking the software
+- Other stakeholders are able to see easily what sort of things they can do with the application, without reading lengthy technical documentation or by interacting aimlessly with the UI
+
+# How does Cucumber deliver BDD 🥒
+
+Cucumber is the most popular BDD framework out there, available as an open-source library across a variety of programming languages. Thanks to this open nature, it is also widely supported by different test management tools, IDEs, and various other libraries, like jUnit or TestNG.
+
+Its main features:
+
+- Feature files that cover major functionality. They contain:
+  - Scenarios that explain specific situations that the software handles. They contain:
+    - Steps that describe in simple terms what the application does in that scenario
+- Step Definition files that link the steps from the scenarios to the actual code that executes the application.
+
+Feature files with scenarios and steps are written using the Gherkin syntax. It imposes certain rules that help not just those who write the files but also Cucumber to parse them.
+
+As mentioned above, BDD can be used for structuring the development of an application, but we will mostly be looking at it from a testing perspective, both manual and automation.
+
+# How it helps manual testers 🔧
+
+Well-written feature files give manual testers all the knowledge they need to perform a scenario with their application:
+
+- The Given section should provide the starting point, with pre-requisites and other general setup steps.
+- The When section shows in a sequential way what actions you need to do with your software
+- The Then section contains all the checks you need to perform in order to verify that the behavior you are checking has been fulfilled successfully
+
+It also enables them to run the automated scenarios easily after setting up the framework. What's more important, however, is that they can also start writing their own scenarios by using the steps already implemented, just like you would start building a Lego structure with existing blocks.
+
+![Building new automation with BDD is easy](https://andreidobra.com/images/posts/cucumber-advantages-disadvantages/lego_building.jpg)
+
+# How it helps automation testers 🤖
+
+Cucumber, at first glance, may seem like a hassle. You are adding an additional layer that forces you to change the test code in new ways. However, it certainly helps when you start creating new scenarios and, just like with manual testers above, you can just chain together existing steps and not search through your code for the methods you want.
+
+It also helps in showing to other members of the team what your automated tests actually do, since they usually don't have the time or knowledge to look at your actual test code. They can just examine the feature files and get a picture of what behavior you have automated and what you are verifying.
+
+# Actually using Cucumber ⚙
+
+Cucumber is a very powerful tool but using it can prove a bit tricky at first. The documentation portal is a bit convoluted, although it does provide some sample skeleton projects to help you get started faster.
+
+One such example is the Cucumber Java Skeleton. It comes in both Maven and Gradle versions and includes dependencies such as Cucumber, of course, as well as jUnit 5. It contains a configured runner class, a feature file, a step definition class, and a class that actually executes some of the behavior that you are verifying.
+
+In my subjective opinion, this sort of skeleton isn't really enough, so I've decided to build my own skeleton project and exemplify the advantages and disadvantages of using a BDD framework such as Cucumber.
+
+Before jumping into things, don't forget that I also have a [free repository with a test automation framework skeleton](https://github.com/andreidbr/test-automation-framework-skeleton) that includes Selenium, Rest Assured, as well as TestNG and a few other goodies that can help kickstart any automation project.
+
+![Bender has his own thoughts on Automation with Cucumber](https://andreidobra.com/images/posts/cucumber-advantages-disadvantages/bender_framework_meme.jpg)
+
+# My own Cucumber Java skeleton framework 💡
+
+Before jumping into things, you should have Java JDK 17 installed, as well as Apache Maven and an IDE such as IntelliJ. Don't forget that, if you're using IntelliJ, you need to have the Cucumber plugin installed.
+
+My own take on what a test automation framework with Cucumber for Java includes, of course, Cucumber. I'm also using JUnit 5, but I've also added dependencies for Selenium and Rest Assured so that we can see how we can write some real-life tests using the BDD framework.
+
+I've written two sample features for front-end and back-end tests, as well as a general feature to demonstrate different usages of data tables. I'm using a few Cucumber features that have helped me in past projects, such as:
+
+- Data tables to simplify passing in parameters and data to my step definitions
+- A Background segment, which executes before every scenario in this specific feature file
+- A Scenario Outline for re-running the same set of steps with different parameters
+- `@Before` and `@After` hooks that run special logic before and after specific tests, in this case those marked by `@ui`
+  Steps that can be written in different ways but still point to the same step definition method
+
+# Advantages ➕
+
+### Easy to understand
+
+As mentioned above, one of the biggest advantages of Cucumber is that your tests have a new layer that simply explains what is happening, from setup and actions to assertions and teardowns. This is instrumental in a project where lots of technical and non-technical people are working. You are all speaking the same language when it comes to the automated tests.
+
+### Promotes reusability
+
+You can re-use existing steps easily and you can find them faster, since you don't have to go through different classes and methods that may be phrased in a way that makes it hard to tell what they do. In IntelliJ, you can just press Control + Click on the step you want to inspect and it will take you directly to its definition. You can then decide if you want to reuse this step in a new scenario. While writing a scenario, IntelliJ automatically shows matching steps that have already been defined in your project.
+
+### Promotes flexibility and parametrization
+
+You can use the slightly more advanced Cucumber features, such as Data Tables, to feed in information to your tests in a structured way. There's also the Scenario Outline functionality, which runs the same scenario with different data based on each row in the Examples section.
+
+### Tags enable targeted testing
+
+You can easily manage what tests you are running, as well as execute more advanced logic, based on the tags for each scenario or feature. Just specify the tags to run in the runner class.
+
+You can also use logical operators for more advanced selections. For example `@Regression or @Smoke and not @ignore` will run all scenarios that have either the `@Regression` or `@Smoke` tags but not the `@ignore` tag.
+
+### Lots of helper libraries and integrations
+
+Cucumber also offers different reporting options, generating a report in formats like json or html. These can easily be imported into test management tools, like the Xray add-on for Jira or TestRail. Thanks to its extended support, there are also plugins that can generate even better looking results, such as Cucumber-Reports.
+
+In the runner class, I've configured this addition plugin for prettier reports, and it generates the resulting HTML files in its specified folder. Here you can see a comparison between the basic HTML report generated natively by Cucumber and the other plugin that uses the somewhat confusingly named cucumber-reports library.
+
+# Disadvantages ➖
+
+Cucumber isn't an ideal approach, however, even if it may seem ideal judging by all those advantages.
+
+![Cucumber does require extra work](https://andreidobra.com/images/posts/cucumber-advantages-disadvantages/extra_work_cucumber.jpg)
+
+### Maintainability
+
+First, if you don't actually need to have others involved in the automation development, just having well-written methods & classes is more than enough. Cucumber can add an additional layer that just more tedious to maintain. As you can see, we have three different step definition classes just in this "simple" skeleton project.
+
+### Implementation quality can fluctuate
+
+Cucumber can also be a victim of its implementation. If you are writing "mega steps" that do many things, often in an unclear way, then you can't really re-use them and others can't understand what's happening just by reading the feature file.
+
+A condensed version of my scenario can theoretically be done with a single step, but that step would need to handle page navigation, title reading, and then asserting.
+
+The reverse of the coin is that you're writing too many low-level steps, ending with scenarios that contain tens of lines and are difficult to read by anyone.
+
+An expanded version performs some unnecessary operations and breaks down some simple to understand implicit actions, like waiting for the page to load.
+
+### Technical limitations
+
+Cucumber also has some technical limitations by design, chief among which being that you can't easily share information (aka state) between steps. You need to rely either on class-level fields or use additional libraries like Cucumber Picocontainer, Spring, or Guice.
+
+A trivial example can be seen in the `frontend.feature` file. My expected page title contains a pipe character. This character is used by Cucumber to delimitate cells within a data table. Unless I escape the character, it would fail compilation due to a mismatch in table cell count.
+
+# Conclusion 🏁
+
+In summary, Cucumber and BDD in general can be very useful, especially for testing, both manual and automated. However, it's important to know the exact situations where this solution works with the least amount of headaches.
+
+If you want to experiment on your own, check out my [free enhanced Cucumber Java skeleton framework on GitHub](https://github.com/andreidbr/cucumber-java-skeleton-enhanced). It has both Cucumber as well as Selenium and Rest Assured so that you can quickly start to write up your own front-end and back-end tests. Please share what you do with it by leaving a comment below.
