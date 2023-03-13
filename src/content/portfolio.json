@@ -11,7 +11,7 @@
     "name": "Cucumber Test Automation Framework Skeleton",
     "description": "An expanded Cucumber BDD test automation project that can be used as a base for new frameworks",
     "github": "https://github.com/andreidbr/cucumber-java-skeleton-enhanced",
-    "website": "https://andreidobra.com/blog/cucumber-advantages-disadvantages",
+    "website": "https://andreidobra.com/images/posts/cucumber-advantages-disadvantages/cucumber-automation-framework-skeleton-header.png",
     "image": "https://andreidobra.com/images/posts/test-automation-framework-skeleton-header.png",
     "stacks": ["java", "testng", "selenium", "restassured"]
   },
