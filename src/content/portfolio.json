@@ -2,7 +2,7 @@
   {
     "name": "My YouTube channel",
     "description": "The place where I upload all sorts of interesting videos",
-    "github": "#",
+    "github": "",
     "website": "https://www.youtube.com/c/AndreiDobra",
     "image": "https://andreidobra.com/images/work/andrei-dobra-youtube-channel-thumbnail.png",
     "stacks": ["youtube", "video", "tutorial"]

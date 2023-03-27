@@ -1,5 +1,5 @@
-import robotoS from '@modules/shared/utils/font';
 import Link from 'next/link';
+import robotoS from '@modules/shared/utils/font';
 import WorkCard from '@modules/shared/components/WorkCard';
 import { WorkProps } from '../home';
 
