@@ -38,7 +38,7 @@ If I input into a calculator `2 + 2`, I don't care about what mathematical rules
 
 # What black box testing is NOT ❌
 
-Once we know details about the internal logic of the software/application we are testing, we cross into [gray box](https://andreidobra.com/blog/gray-box-testing-basics/) and [white box testing](https://andreidobra.com/blog/white-box-testing-basics/) territories. This is not a bad thing but, to say that you are conducting black box testing while targeting specific scenarios that you know will may fail because you have looked at the source code is not true.
+Once we know details about the internal logic of the software/application we are testing, we cross into [gray box](https://andreidobra.com/blog/gray-box-testing-basics) and [white box testing](https://andreidobra.com/blog/white-box-testing-basics) territories. This is not a bad thing but, to say that you are conducting black box testing while targeting specific scenarios that you know will may fail because you have looked at the source code is not true.
 
 For example, going back to the calculator: if I know that, behind the scenes, the order of operations may not be implemented as intended, I will input `2 + 2 / 2`.
 
@@ -46,7 +46,7 @@ In correctly designed calculators, this will output `3`, because first `2 / 2` i
 
 But because I saw in the source code that the order of operations was not implemented correctly, I knew that the faulty calculator will result in an incorrect result, such as `2`.
 
-My test, which was more of a gray/white box example, can't be called a black box test just because | gave an input and examined the output. For a full comparison between the "box" testing techniques, check out our full article about [Black vs. Gray vs. White Box Testing](https://andreidobra.com/blog/black-vs-gray-vs-white-box-testing/).
+My test, which was more of a gray/white box example, can't be called a black box test just because | gave an input and examined the output. For a full comparison between the "box" testing techniques, check out our full article about [Black vs. Gray vs. White Box Testing](https://andreidobra.com/blog/black-vs-gray-vs-white-box-testing).
 
 # Implementing black box testing ✅
 
